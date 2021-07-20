@@ -1,0 +1,110 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': '/opt/homebrew/bin/lerna'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/mr.yang/Desktop/lerna-demo
+3 verbose session 59703aff4ef49ccf
+4 verbose user-agent lerna/4.0.0/node@v16.4.2+arm64 (darwin)
+5 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '4.0.0' }
+6 verbose rootPath /Users/mr.yang/Desktop/lerna-demo
+7 info current version 0.0.2
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch main
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 1
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "v0.0.2-1-g556adc6" => {"lastTagName":"v0.0.2","lastVersion":"v0.0.2","refCount":"1","sha":"556adc6","isDirty":false}
+18 info Looking for changed packages since v0.0.2
+19 silly checking diff packages/module1
+20 silly found diff in packages/module1/index.js
+20 silly found diff in packages/module1/package.json
+21 verbose filtered diff [ 'packages/module1/index.js', 'packages/module1/package.json' ]
+22 silly checking diff packages/module2
+23 silly found diff in packages/module2/index.js
+23 silly found diff in packages/module2/package.json
+24 verbose filtered diff [ 'packages/module2/index.js', 'packages/module2/package.json' ]
+25 verbose updated module1
+26 verbose updated module2
+27 verbose git-describe undefined => "v0.0.2-1-g556adc6"
+28 silly git-describe parsed => {"lastTagName":"v0.0.2","lastVersion":"v0.0.2","refCount":"1","sha":"556adc6","isDirty":false}
+29 info execute Skipping releases
+30 silly lifecycle No script for "preversion" in "root", continuing
+31 silly lifecycle No script for "preversion" in "module1", continuing
+32 silly lifecycle No script for "version" in "module1", continuing
+33 silly lifecycle No script for "preversion" in "module2", continuing
+34 silly lifecycle No script for "version" in "module2", continuing
+35 silly lifecycle No script for "version" in "root", continuing
+36 silly gitAdd [
+36 silly gitAdd   'packages/module1/package.json',
+36 silly gitAdd   'packages/module2/package.json',
+36 silly gitAdd   'lerna.json'
+36 silly gitAdd ]
+37 silly gitCommit v0.0.3
+38 verbose git [ 'commit', '-m', 'v0.0.3' ]
+39 silly gitTag v0.0.3
+40 verbose git [ 'tag', 'v0.0.3', '-m', 'v0.0.3' ]
+41 silly lifecycle No script for "postversion" in "module1", continuing
+42 silly lifecycle No script for "postversion" in "module2", continuing
+43 silly lifecycle No script for "postversion" in "root", continuing
+44 info git Pushing tags...
+45 silly gitPush origin main
+46 info publish Publishing packages to npm...
+47 notice Skipping all user and access validation due to third-party registry
+48 notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+49 warn ENOLICENSE Packages module1 and module2 are missing a license.
+49 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+49 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+50 silly getCurrentSHA
+51 verbose getCurrentSHA 9b2bf4c0c38b8ca3260c68c4563d87e1ac911e00
+52 silly lifecycle No script for "prepublish" in "root", continuing
+53 silly lifecycle No script for "prepare" in "root", continuing
+54 silly lifecycle No script for "prepublishOnly" in "root", continuing
+55 silly lifecycle No script for "prepack" in "root", continuing
+56 verbose pack-directory packages/module1
+57 silly lifecycle No script for "prepublish" in "module1", continuing
+58 silly lifecycle No script for "prepare" in "module1", continuing
+59 silly lifecycle No script for "prepublishOnly" in "module1", continuing
+60 silly lifecycle No script for "prepack" in "module1", continuing
+61 silly lifecycle No script for "postpack" in "module1", continuing
+62 verbose packed packages/module1
+63 verbose pack-directory packages/module2
+64 silly lifecycle No script for "prepublish" in "module2", continuing
+65 silly lifecycle No script for "prepare" in "module2", continuing
+66 silly lifecycle No script for "prepublishOnly" in "module2", continuing
+67 silly lifecycle No script for "prepack" in "module2", continuing
+68 silly lifecycle No script for "postpack" in "module2", continuing
+69 verbose packed packages/module2
+70 silly lifecycle No script for "postpack" in "root", continuing
+71 verbose publish module1
+72 silly FetchError: request to http://47.95.2.104:4873/module1 failed, reason: socket hang up
+72 silly     at ClientRequest.<anonymous> (/Users/mr.yang/.config/yarn/global/node_modules/minipass-fetch/lib/index.js:97:14)
+72 silly     at ClientRequest.emit (node:events:394:28)
+72 silly     at Socket.socketOnEnd (node:_http_client:471:9)
+72 silly     at Socket.emit (node:events:406:35)
+72 silly     at endReadableNT (node:internal/streams/readable:1329:12)
+72 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+72 silly  FetchError: request to http://47.95.2.104:4873/module1 failed, reason: socket hang up
+72 silly     at ClientRequest.<anonymous> (/Users/mr.yang/.config/yarn/global/node_modules/minipass-fetch/lib/index.js:97:14)
+72 silly     at ClientRequest.emit (node:events:394:28)
+72 silly     at Socket.socketOnEnd (node:_http_client:471:9)
+72 silly     at Socket.emit (node:events:406:35)
+72 silly     at endReadableNT (node:internal/streams/readable:1329:12)
+72 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+72 silly   code: 'ECONNRESET',
+72 silly   errno: 'ECONNRESET',
+72 silly   type: 'system'
+72 silly }
+73 error ECONNRESET request to http://47.95.2.104:4873/module1 failed, reason: socket hang up
+74 error FetchError: request to http://47.95.2.104:4873/module1 failed, reason: socket hang up
+74 error     at ClientRequest.<anonymous> (/Users/mr.yang/.config/yarn/global/node_modules/minipass-fetch/lib/index.js:97:14)
+74 error     at ClientRequest.emit (node:events:394:28)
+74 error     at Socket.socketOnEnd (node:_http_client:471:9)
+74 error     at Socket.emit (node:events:406:35)
+74 error     at endReadableNT (node:internal/streams/readable:1329:12)
