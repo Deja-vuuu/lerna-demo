@@ -9,6 +9,7 @@ https://juejin.cn/post/6944877410827370504
 
 #### module-2 依赖 module-1
 
+#### lerna add react-luck-draw --scope=vite-test
 #### lerna add module-1 --scope=module-2
 
 
