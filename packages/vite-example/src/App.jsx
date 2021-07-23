@@ -5,8 +5,8 @@ function App() {
   console.log(LuckyWheel);
   return (
     <div className="App">
-   
-   <LuckyWheel width="300px" height="300px"></LuckyWheel>
+
+     
     </div>
   )
 }
