@@ -1,12 +1,12 @@
 import React from 'react'
-import  {LuckyWheel} from 'react-luck-draw'
+import { LuckyGrid, LuckyWheel } from 'react-luck-draw';
+console.log('LuckyGrid', LuckyGrid);
+console.log('LuckyWheel', LuckyWheel);
 
 function App() {
-  console.log(LuckyWheel);
   return (
     <div className="App">
-
-     
+     11
     </div>
   )
 }

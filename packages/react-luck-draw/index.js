@@ -1,1 +1,1 @@
-module.exports = require('./dist/react-luck-draw.cjs.js')
+export { LuckyGrid, LuckyWheel } from './dist/react-luck-draw.es';
