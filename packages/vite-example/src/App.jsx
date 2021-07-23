@@ -1,8 +1,8 @@
 import React from 'react'
-import  a from 'react-luck-draw'
+import  {LuckyWheel} from 'react-luck-draw'
 
 function App() {
-  console.log(a);
+  console.log(LuckyWheel);
   return (
     <div className="App">
    
