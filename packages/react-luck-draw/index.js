@@ -1,1 +1,0 @@
-export { LuckyGrid, LuckyWheel } from './dist/react-luck-draw.es';
