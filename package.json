@@ -1,18 +1,51 @@
 {
   "name": "root",
-  "devDependencies": {
-    "lerna": "^4.0.0"
-  },
+  "version": "1.0.0",
+  "description": "dooring组件库",
+  "main": "index.js",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "start": "lerna run dev --parallel",
-    "build": "lerna run build --sort --stream",
-    "update-version": "lerna version --conventional-commits --no-push --no-changelog --no-git-tag-version",
-    "publish-to-npm": "lerna publish from-package",
-    "publish-beta": "lerna publish --no-git-tag-version --dist-tag beta"
+    "popvip": "lerna run --scope @dooring/base --scope @dooring/popvip dev --parallel"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts *.": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "yangyang",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "commitizen": "^4.2.4",
+    "cz-lerna-changelog": "^2.0.3",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "lint-staged": "^12.1.4",
+    "standard": "^16.0.4"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.16.5",
+    "@rollup/plugin-json": "^4.1.0",
+    "@types/react": "^17.0.38"
+  }
 }
